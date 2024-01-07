@@ -1,0 +1,21 @@
+.root {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.first {
+  padding: 12px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 53% 45%;
+}
+
+.title {
+  display: flex;
+  font-size: 30px;
+  margin: 40px auto auto;
+  justify-content: center;
+  align-items: center;
+}
