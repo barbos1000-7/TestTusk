@@ -1,0 +1,35 @@
+.tags {
+    font-size: 30px;
+}
+
+.info {
+    font-size: 30px;
+    width: 80%;
+}
+
+.root {
+    margin-left: 20px;
+}
+
+.tag {
+    border: 1px solid teal;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 125px;
+}
+
+.red {
+    display: flex;
+}
+
+.AllTags {
+    margin-top: 20PX;
+}
+
+.img {
+    min-width: 100px;
+}
+
+/*# sourceMappingURL=index.module.css.map */

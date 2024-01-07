@@ -1,0 +1,21 @@
+.root {
+    display: flex;
+}
+
+.btn {
+    color: #fff;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 20px 30px;
+}
+
+/*# sourceMappingURL=index.module.css.map */

@@ -1,10 +1,18 @@
 .root {
   display: flex;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.change {
+  width: 300px;
 }
 
 .btn {
   color: #fff;
+
   width: 100%;
+
   outline: none;
   border: none;
   background-color: #000;
@@ -18,4 +26,11 @@
   padding: 20px 30px;
 }
 
-/*# sourceMappingURL=index.module.css.map */
+.post {
+  padding-top: 10px;
+}
+
+.delete {
+  margin-left: 50px;
+  cursor: pointer;
+}

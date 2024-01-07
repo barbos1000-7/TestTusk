@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import s from './index.module.scss'
 import {useUnit} from "effector-react";
-import {$tags, addTag, delTag} from "@/stores/layout/menu/content/init";
+import {$tags, addTag, delTag} from "@/stores/init";
 import Image from "next/image";
 
 type Props = {
@@ -25,8 +25,8 @@ const Info = ({tags, info}: Props) => {
                                                              key={t.id}>
                         {t.name}</div>)}
                     </div> : <div className={s.info}>Тэги для этого контента еще не выбраны</div>}
-                    <Image width='70' height='70' className={s.img}  alt='red' onClick={() => {
-                        if(tags.length === allTags.length) {
+                    <Image width='70' height='70' className={s.img} alt='red' onClick={() => {
+                        if (tags.length === allTags.length) {
                         } else setOpen(!open)
                     }} src='/red.png'/></div>
                 {open && tags.length !== allTags.length && <div className={s.AllTags}>

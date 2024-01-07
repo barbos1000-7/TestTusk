@@ -1,14 +1,23 @@
 .tags {
-  font-size: 30px;
+  font-size: 29px;
 }
 
 .info {
-  font-size: 30px;
+  font-size: 29px;
   width: 80%;
+
 }
 
 .root {
   margin-left: 20px;
+  overflow-y: auto;
+  height: 470px;
+  overflow-x: clip;
+}
+
+.img {
+  position: absolute;
+  right: 0;
 }
 
 .tag {
@@ -21,15 +30,10 @@
 }
 
 .red {
+  position: relative;
   display: flex;
 }
 
 .AllTags {
   margin-top: 20PX;
 }
-
-.img {
-  min-width: 100px;
-}
-
-/*# sourceMappingURL=index.module.css.map */

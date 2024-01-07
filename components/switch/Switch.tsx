@@ -10,7 +10,7 @@ type Props = {
 }
 
 
-const Switch = ({ isOn, handleToggle, colorOne, colorTwo, disable }:Props) => {
+const Switch = ({isOn, handleToggle, colorOne, colorTwo, disable}: Props) => {
     return (
         <>
             <input
@@ -22,11 +22,11 @@ const Switch = ({ isOn, handleToggle, colorOne, colorTwo, disable }:Props) => {
                 disabled={disable}
             />
             <label
-                style={{ background: isOn ? colorOne : colorTwo }}
+                style={{background: isOn ? colorOne : colorTwo}}
                 className={s.switchLabel}
                 htmlFor={`switch`}
             >
-                <span className={s.switchButton} />
+                <span className={s.switchButton}/>
             </label>
         </>
     );

@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
-import Block from "@/components/TEST/block/Block";
-import {menuMounted} from "@/stores/layout/menu/content/init";
+import Block from "@/components/block/Block";
+import {menuMounted} from "@/stores/init";
 
 const Test = () => {
-    useEffect(()=> {
+    useEffect(() => {
         menuMounted()
     }, [])
     return (
         <div>
-            <Block />
+            <Block/>
         </div>
     );
 };

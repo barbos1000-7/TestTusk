@@ -1,13 +1,10 @@
-
-
 import {createEffect, createEvent, sample} from "effector";
 import {createStore} from 'effector/compat'
 import axios from "axios";
 
- const notAuthApi = axios.create({
+const notAuthApi = axios.create({
     baseURL: process.env.SERVER_URL,
 })
-
 
 
 export type Block = {
@@ -47,8 +44,8 @@ export const $allBlocks = createStore<Block[]>([]).on(getMenuContentFx.done, (_,
     return payload.result
 })
     .on(setAllBlocks, (_, payload) => {
-       return _.map(b => {
-            if(b.id === payload.id) {
+        return _.map(b => {
+            if (b.id === payload.id) {
                 return payload
             } else return b
         })
@@ -64,10 +61,10 @@ export const setActiveBlock = createEvent<Block>()
 const $blockActive = createStore<Block>(null)
     .on(addTag, (_, payload) => {
         return {..._, tags: [..._.tags, payload]}
-    } )
-    .on(delTag,( _, payload) => {
+    })
+    .on(delTag, (_, payload) => {
         return {..._, tags: _.tags.filter(t => t.id !== payload)}
-    }  )
+    })
     .on(setActiveBlock, (_, payload) => {
         console.log(payload, 'payypalll')
         return payload
@@ -85,5 +82,4 @@ sample({
 })
 
 
-
-export {$blockActive, addTag, menuMounted,delTag, getAllTagsFx, getMenuContentFx, $tags}
+export {$blockActive, addTag, menuMounted, delTag, getAllTagsFx, getMenuContentFx, $tags}
