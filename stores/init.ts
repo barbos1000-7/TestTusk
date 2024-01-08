@@ -23,8 +23,8 @@ export type tag = {
     id: number
 }
 const getMenuContentFx = createEffect(async () => {
-    const menuContent = await notAuthApi.get(`api/menu-content/`)
-    return menuContent.data
+    const blockContent = await notAuthApi.get(`api/block-content/`)
+    return blockContent.data
 })
 const getAllTagsFx = createEffect(async () => {
     const tags = await notAuthApi.get(`api/tags/`)
@@ -32,7 +32,7 @@ const getAllTagsFx = createEffect(async () => {
 })
 
 
-const menuMounted = createEvent()
+const blockMounted = createEvent()
 const addTag = createEvent<tag>()
 const delTag = createEvent<number>()
 
@@ -73,13 +73,13 @@ const $tags = createStore<tag[]>([]).on(getAllTagsFx.done, (_, payload) => paylo
 
 
 sample({
-    clock: menuMounted,
+    clock: blockMounted,
     target: getMenuContentFx
 })
 sample({
-    clock: menuMounted,
+    clock: blockMounted,
     target: getAllTagsFx
 })
 
 
-export {$blockActive, addTag, menuMounted, delTag, getAllTagsFx, getMenuContentFx, $tags}
+export {$blockActive, addTag, blockMounted, delTag, getAllTagsFx, getMenuContentFx, $tags}
